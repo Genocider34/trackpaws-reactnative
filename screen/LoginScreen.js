@@ -10,6 +10,8 @@ import SecondaryText from "../components/SecondaryText";
 import PrimaryText from "../components/PrimaryText";
 import PrimaryButton from "../components/PrimaryButton";
 import Icon from "../components/Icon";
+import Box from "../components/Box";
+import UserInput from "../components/UserInput";
 
 export default function LoginScreen() {
   return (
@@ -29,46 +31,43 @@ export default function LoginScreen() {
             </SecondaryText>
           </View>
 
-          <View style={styles.mainContainer}>
+          <Box>
             <PrimaryText style={styles.h2}>Sign In</PrimaryText>
             <View style={styles.centerContainer}>
               {/* Text Input username */}
-              <TextInput
-                style={styles.input}
-                placeholder="Username"
-                placeholderTextColor={COLOR.white}
-              />
+              <UserInput placeholder="Enter Username" />
 
               {/* Text Input password */}
-              <TextInput
-                style={styles.input}
-                placeholder="Password"
-                placeholderTextColor={COLOR.white}
-              />
+              <UserInput placeholder="Enter Password" secureTextEntry={true} />
             </View>
+
             {/* Forgot Password Button */}
             <Pressable>
               <SecondaryText style={styles.endText}>
                 Forgot Password?
               </SecondaryText>
             </Pressable>
+
             {/* Login Button */}
             <PrimaryButton style={styles.button}>Login</PrimaryButton>
+
             <PrimaryText style={styles.text}>
               ───────── Or continue with ─────────
             </PrimaryText>
+
             {/* Icons  */}
             <View style={styles.imageContainer}>
               <Icon source={require("../assets/images/google.png")} />
               <Icon source={require("../assets/images/facebook.png")} />
             </View>
+
             <View style={styles.registerContainer}>
               <SecondaryText>Not a member?</SecondaryText>
               <Pressable>
                 <PrimaryText> Register now</PrimaryText>
               </Pressable>
             </View>
-          </View>
+          </Box>
         </View>
       </ImageBackground>
     </View>
@@ -91,11 +90,12 @@ const styles = StyleSheet.create({
   h2: {
     fontSize: 20,
     textAlign: "center",
+    marginVertical: 10,
   },
   headerTextContainer: {
     justifyContent: "center",
     alignItems: "center",
-    margin: 20,
+    marginVertical: 40,
   },
   text: {
     marginBottom: 12,
@@ -104,23 +104,6 @@ const styles = StyleSheet.create({
   centerContainer: {
     justifyContent: "center",
     alignItems: "center",
-  },
-  input: {
-    backgroundColor: COLOR.lightBrown,
-    color: COLOR.white,
-    fontFamily: "Poppins-Regular",
-    width: "100%",
-    paddingVertical: 12,
-    paddingHorizontal: 12,
-    margin: 8,
-    borderRadius: 10,
-  },
-  mainContainer: {
-    borderWidth: 3,
-    borderColor: COLOR.darkBrown,
-    borderStyle: "dashed",
-    backgroundColor: COLOR.white,
-    padding: 12,
   },
   endText: {
     textAlign: "right",

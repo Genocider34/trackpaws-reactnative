@@ -1,7 +1,7 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StatusBar, Platform, StyleSheet, Text, View } from "react-native";
 import LoginScreen from "./screen/LoginScreen";
 import { useFonts } from "expo-font";
+import RegistrationScreen from "./screen/RegistrationScreen";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -17,6 +17,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <LoginScreen />
+      {/* <RegistrationScreen /> */}
     </View>
   );
 }
@@ -24,5 +25,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
