@@ -2,6 +2,8 @@ import { StatusBar, Platform, StyleSheet, Text, View } from "react-native";
 import LoginScreen from "./screen/LoginScreen";
 import { useFonts } from "expo-font";
 import RegistrationScreen from "./screen/RegistrationScreen";
+import ForgotPasswordScreen from "./screen/ForgotPasswordScreen";
+import VerificationScreen from "./screen/VerificationScreen";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -18,6 +20,9 @@ export default function App() {
     <View style={styles.container}>
       <LoginScreen />
       {/* <RegistrationScreen /> */}
+      {/* <EnrollmentRegistrationScreen /> */}
+      {/* <ForgotPasswordScreen /> */}
+      {/* <VerificationScreen /> */}
     </View>
   );
 }
