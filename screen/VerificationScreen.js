@@ -16,8 +16,8 @@ export default function VerificationScreen() {
           phone number ending in 09*******19
         </SecondaryText>
       </View>
-      <SecondaryText>Enter Code</SecondaryText>
       <View style={styles.inputContainer}>
+        <SecondaryText>Enter Code</SecondaryText>
         <UserInput style={styles.input} />
       </View>
       <PrimaryButton>Verify Code</PrimaryButton>
@@ -29,10 +29,10 @@ export default function VerificationScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLOR.white,
+    // backgroundColor: COLOR.white,
     margin: 40,
-    borderWidth: 1,
-    borderColor: "gray",
+    // borderWidth: 1,
+    // borderColor: "gray",
   },
   headerContainer: {
     flex: 1,
@@ -41,11 +41,13 @@ const styles = StyleSheet.create({
     fontSize: 36,
     textAlign: "center",
   },
-  inputContainer: {
-    flex: 2,
-    width: "100%",
-  },
   text: {
     textAlign: "center",
+  },
+  input: {
+    marginVertical: 12,
+  },
+  inputContainer: {
+    flex: 2,
   },
 });

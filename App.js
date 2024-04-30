@@ -4,6 +4,7 @@ import { useFonts } from "expo-font";
 import RegistrationScreen from "./screen/RegistrationScreen";
 import ForgotPasswordScreen from "./screen/ForgotPasswordScreen";
 import VerificationScreen from "./screen/VerificationScreen";
+import ResetPasswordScreen from "./screen/ResetPasswordScreen";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -23,6 +24,7 @@ export default function App() {
       {/* <EnrollmentRegistrationScreen /> */}
       {/* <ForgotPasswordScreen /> */}
       {/* <VerificationScreen /> */}
+      {/* <ResetPasswordScreen /> */}
     </View>
   );
 }

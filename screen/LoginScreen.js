@@ -35,10 +35,14 @@ export default function LoginScreen() {
             <PrimaryText style={styles.h2}>Sign In</PrimaryText>
             <View style={styles.centerContainer}>
               {/* Text Input username */}
-              <UserInput placeholder="Enter Username" />
+              <UserInput style={styles.input} placeholder="Enter Username" />
 
               {/* Text Input password */}
-              <UserInput placeholder="Enter Password" secureTextEntry={true} />
+              <UserInput
+                style={styles.input}
+                placeholder="Enter Password"
+                secureTextEntry={true}
+              />
             </View>
 
             {/* Forgot Password Button */}
@@ -131,5 +135,8 @@ const styles = StyleSheet.create({
   },
   rootScreen: {
     flex: 1,
+  },
+  input: {
+    marginVertical: 8,
   },
 });

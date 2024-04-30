@@ -22,13 +22,13 @@ export default function UserInput({
 
 const styles = StyleSheet.create({
   input: {
-    flex: 1,
     backgroundColor: COLOR.lightBrown,
     color: COLOR.white,
     fontFamily: "Poppins-Regular",
-    padding: 24,
-    margin: 8,
+    padding: 16,
+    // margin: 8,
     borderRadius: 10,
-    fontSize: 24,
+    fontSize: 16,
+    width: "100%",
   },
 });
